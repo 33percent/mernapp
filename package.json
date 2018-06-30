@@ -1,0 +1,29 @@
+{
+  "name": "mernapp",
+  "version": "1.0.0",
+  "description": "MernStack",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandeepkumardev/mernapp.git"
+  },
+  "keywords": [
+    "mern"
+  ],
+  "author": "sandeep",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sandeepkumardev/mernapp/issues"
+  },
+  "homepage": "https://github.com/sandeepkumardev/mernapp#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "debug": "^3.1.0",
+    "express": "^4.16.3",
+    "mongoose": "^5.1.7"
+  }
+}
