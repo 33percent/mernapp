@@ -2,9 +2,9 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-
-const index = require('./routes/index');
-
+const mongoose = require('mongoose');
+const index = require('./server/routes/index.js');
+const users = require('./server/routes/users.js')
 const app = express();
 
 // view engine setup
@@ -18,9 +18,18 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// mongoose.connect('mongodb://localhost/mernapp');
+mongoose.connect('mongodb://localhost/mernapp').then(
+  () => {
+    console.log('connecyted')
+  },
+  (err) => {
+    console.log(err)
+  }
+
+)
 
 app.use('/', index);
+app.use('/users',users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
