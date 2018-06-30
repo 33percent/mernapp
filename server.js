@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-
+const winston = require('winston')
 
 const index = require('./routes/index');
 
@@ -29,6 +29,10 @@ app.use(function(req, res, next) {
   err.status = 404;
   next(err);
 });
+
+//logger
+require('./logger.js')
+
 
 // error handler
 app.use(function(err, req, res, next) {
