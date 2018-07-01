@@ -4,7 +4,9 @@
   "description": "MernStack",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "start": "node server.js",
+    "build":"webpack",
+    "dev-server":"webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -20,13 +22,36 @@
   },
   "homepage": "https://github.com/sandeepkumardev/mernapp#readme",
   "dependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.3",
+    "css-loader": "^0.28.11",
     "debug": "^3.1.0",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
+    "jshint": "^2.9.5",
     "mongoose": "^5.1.7",
+    "node-sass": "^4.9.0",
     "nodemon": "^1.17.5",
+    "normalize.css": "^8.0.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-modal": "^3.4.5",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.0",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.14.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4",
     "winston": "^3.0.0"
   }
 }
